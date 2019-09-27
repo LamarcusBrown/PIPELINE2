@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage ('Ansicolor') { 
+        stage('Ansicolor') { 
             ansiColor('xterm') {
             // This displays colors using the 'xterm' ansi color map.
             // Just some echoes to show the ANSI color.
