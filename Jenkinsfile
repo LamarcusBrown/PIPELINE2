@@ -6,10 +6,9 @@ pipeline {
         MY_NAME='Marc'
     }
 
-    stages {
-        stage('Ansicolor') { 
+    stages { 
+        // This displays colors using the 'xterm' ansi color map.
             ansiColor('xterm') {
-            // This displays colors using the 'xterm' ansi color map.
             // Just some echoes to show the ANSI color.
                 sh """
                stage "\u001B[31mI'm Red\u001B[0m Now not"
