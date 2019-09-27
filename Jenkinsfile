@@ -7,12 +7,15 @@ pipeline {
     }
 
     stages {
-        ansiColor('xterm') {
+        stage ('Ansicolor') { 
+            ansiColor('xterm') {
             // This displays colors using the 'xterm' ansi color map.
             // Just some echoes to show the ANSI color.
-            stage "\u001B[31mI'm Red\u001B[0m Now not"
+                sh """
+               stage "\u001B[31mI'm Red\u001B[0m Now not"
+                """
             }
-
+        }
         stage('Environment Prep') {
             steps {
                sh """
